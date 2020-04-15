@@ -1,0 +1,61 @@
+
+  .Container {
+    margin-left: 25px ;
+    width: 300px;
+  }
+
+  .ContactList-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 350px;
+    padding: 10px;
+    
+    border-radius: 2px;
+    font-family: Arial;
+  }
+  
+ .ContactList-label {
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 0;
+  }
+  
+   .ContactList-input  {
+    
+    display: inline-block;
+    height: 34px;
+    width: 250px;
+    box-sizing: border-box;
+    padding: 0 18px;
+    margin-bottom: 10px;
+
+  }
+  
+  .ContactList-button {
+    padding: 8px 16px;
+    border-radius: 3px;
+    background-color: #3884ff;
+    transition: all 200ms ease;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
+    width: 220px;
+    
+  }
+  
+ .ContactList-title  {
+    color: rgb(51, 127, 237);
+    font-weight: bold;
+  }
+  
+
+
+

@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { connect } from 'react-redux';
+
 import routes from "../router";
-import {authSelectors} from "../redux/auth";
+
 import UserMenu from "./UserMenu";
+import withAuth from "../hoc/withAuth";
 
 const styles = {
   link: {
@@ -18,30 +19,26 @@ const styles = {
   },
 
   nav: {
-    display:"flex",
+    display: "flex",
   },
 };
 
-const Navigation = ({isAuthorized}) => (
-    <nav style={styles.nav}>
-    {routes.map(route => (
+const Navigation = ({ isAuthorized }) => (
+  <nav style={styles.nav}>
+    <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
+      Home
+    </NavLink>
+
+    {isAuthorized && (
       <NavLink
-        exact={route.exact}
-        key={route.label}
-        to={route.path}
+        to="/contacts"
         style={styles.link}
         activeStyle={styles.activeLink}
       >
-        {route.label}
+        Contacts
       </NavLink>
-    ))}
-     {isAuthorized && <UserMenu/>}
+    )}
   </nav>
 );
 
-const mapStateToProps = state => ({
-  isAuthorized: authSelectors.isAuthorized(state),
-});
-
-export default connect(mapStateToProps)(Navigation);
-
+export default withAuth(Navigation);

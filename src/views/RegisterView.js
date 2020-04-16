@@ -5,12 +5,23 @@ import {connect} from "react-redux";
 const styles = {
   form: {
     width: 320,
+    fontFamily: "Arial",
+    padding: "10px",
   },
   label: {
     display: "flex",
     flexDirection: "column",
     padding: 4,
   },
+
+  input:{
+    display: "inline-block",
+    height: "34px",
+    width: "250px",
+    boxSizing: "border-box",
+    padding: "0 18px",
+    marginBottom: "10px",
+    },
 };
 
 class RegisterView extends Component {
@@ -46,6 +57,7 @@ class RegisterView extends Component {
               onChange={this.handleChange}
               value={this.state.name}
               name="name"
+              style={styles.input}
             />
           </label>
           <label style={styles.label}>
@@ -55,6 +67,7 @@ class RegisterView extends Component {
               onChange={this.handleChange}
               value={this.state.email}
               name="email"
+              style={styles.input}
             />
           </label>
 
@@ -65,6 +78,7 @@ class RegisterView extends Component {
               onChange={this.handleChange}
               value={this.state.password}
               name="password"
+              style={styles.input}
             />
           </label>
           <button type="submit">Submit</button>

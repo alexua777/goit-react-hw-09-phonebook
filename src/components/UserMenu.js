@@ -14,6 +14,7 @@ const styles = {
   name: {
     fontWeight: 700,
     marginRight: 12,
+    display: "inline-block",
   },
 };
 
@@ -22,9 +23,9 @@ const UserMenu = ({
   name,
   onLogout,
 }) => (
-  <div>
+  <div style={styles.container}>
     <img src={avatar} alt="" width="32" style={styles.avatar} />
-    <span>Welcome, {name}</span>
+    <span style={styles.name}>Welcome, {name}</span>
     <button type="button" onClick={onLogout}>Log Out</button>
   </div>
 );

@@ -1,7 +1,7 @@
 import phoneActions from "./phoneActions";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com";
+// axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com";
 
 // axios.defaults.headers.post['Content-Type'] = 'application/json';
 // axios.defaults.headers.common['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThmMjZjYjQxY2JjYjAwMTdmZTFlZmMiLCJpYXQiOjE1ODY0Mzk4ODN9.sIDHu1-CUt9cgFnHT2fz_jG6zmYHLR1GZ0SvgEW8G_o';

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import "../styles/FormStyle.css";
 import contactOperations from "../redux/phonebook/contactOperations";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import "../LogoAppear.css";
+
 import AlertTransisiton from "../styles/AlertTransisiton.module.css";
 import FilterTransition from "../styles/FilterTransition.module.css"
 import contactsSelectors from "../redux/phonebook/contactsSelectors";

@@ -4,6 +4,7 @@ import PhoneBook from "../components/PhoneBook";
 import ContactList from "../components/ContactList";
 import { authSelectors } from "../redux/auth";
 import contactOperations from "../redux/phonebook/contactOperations";
+import PrivateRoute from "../components/PrivateRoute";
 
 class ContactView extends Component {
   componentDidMount() {
@@ -24,8 +25,8 @@ class ContactView extends Component {
   render() {
     return (
       <>
-        <PhoneBook></PhoneBook>
-        <ContactList></ContactList>
+        <PhoneBook/>
+        <ContactList/>
       </>
     );
   }

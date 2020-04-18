@@ -9,6 +9,7 @@ import FilterTransition from "../styles/FilterTransition.module.css"
 import contactsSelectors from "../redux/phonebook/contactsSelectors";
 import Alert from "./Alert";
 import Filter from "./Filter";
+import AppTitle from "./AppTitle";
 
 class PhoneBook extends Component {
   state = {
@@ -38,19 +39,12 @@ class PhoneBook extends Component {
   };
 
   render() {
-    const { isExist, showFilter } = this.state;
+    const { isExist, } = this.state;
 
     return (
       <>
         <div className="Container">
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={500}
-            classNames="Logo"
-          >
-            <h1 className="ContactList-title">Phonebook</h1>
-          </CSSTransition>
+          <AppTitle/>
           <CSSTransition
             in={isExist}
             timeout={1000}
